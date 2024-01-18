@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">banapp</string>
+    <string name="coin">コイン</string>
+    <string name="pet_name">ペット名</string>
+    <string name="bt_profile">プロフィール</string>
+    <string name="bt_shop">ショップ</string>
+    <string name="bt_achievement">アチーブメント</string>
+    <string name="bt_history">ヒストリー</string>
+</resources>
