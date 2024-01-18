@@ -1,9 +1,30 @@
 <resources>
     <string name="app_name">banapp</string>
+    <!-- ホーム -->
     <string name="coin">コイン</string>
     <string name="pet_name">ペット名</string>
     <string name="bt_profile">プロフィール</string>
     <string name="bt_shop">ショップ</string>
     <string name="bt_achievement">アチーブメント</string>
     <string name="bt_history">ヒストリー</string>
+
+    <!--    アチーブメント-->
+    <string name="tv_achievements_title">アチーブメント</string>
+    <string name="bt_back">戻る</string>
+    <string name="bt_achievements_feed_day1">1日えさやりしよう</string>
+    <string name="bt_achievements_feed_day2">2日えさやりしよう</string>
+    <string name="bt_achievements_feed_day3">3日えさやりしよう</string>
+    <string name="bt_achievements_feed_day5">5日えさやりしよう</string>
+    <string name="tv_achievements_get50">¥50獲得</string>
+    <string name="tv_achievements_get100">¥100獲得</string>
+    <string name="tv_achievements_get150">¥150獲得</string>
+    <string name="tv_achievements_get200">¥200獲得</string>
+    <string name="bt_achievements_get">GET</string>
+    <string name="bt_achievements_received">RECEIVED</string>
+
+    <!--ヒストリー-->
+    <string name="tv_history_title">ヒストリー</string>
+    <string name="tv_history_pet">ペットの名前:たろう</string>
+    <string name="tv_history_days">生存期間:3日</string>
+    <string name="tv_history_money">得したお金:15000円</string>
 </resources>

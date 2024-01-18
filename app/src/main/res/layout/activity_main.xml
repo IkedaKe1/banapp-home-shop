@@ -100,12 +100,12 @@
         app:srcCompat="@drawable/atievement" />
 
     <TextView
-        android:id="@+id/tv_achievent"
+        android:id="@+id/tv_achievement"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:text="アチーブメント"
+        android:text="@string/bt_achievement"
         app:layout_constraintEnd_toEndOf="@+id/bt_achievement"
         app:layout_constraintStart_toStartOf="@+id/bt_achievement"
         app:layout_constraintTop_toTopOf="@+id/bt_achievement" />
@@ -129,7 +129,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:text="ヒストリー"
+        android:text="@string/bt_history"
         app:layout_constraintEnd_toEndOf="@+id/bt_history"
         app:layout_constraintStart_toStartOf="@+id/bt_history"
         app:layout_constraintTop_toTopOf="@+id/bt_history" />
