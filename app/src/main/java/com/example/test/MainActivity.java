@@ -13,24 +13,22 @@ import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
+    /* ホーム画面 */
 
-    private ImageView catImageView;
-    private boolean isCat1Visible = true;
-    private Handler handler;
+    private ImageView catImageView;  //画像格納
+    private boolean isCat1Visible = true;  //画像を切り替えるためのフラグ
+    private Handler handler; //
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
 
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         catImageView = findViewById(R.id.catImageView);
 
         // 初期画像を表示
         catImageView.setImageResource(R.drawable.cat1);
-
-        // 画像切り替え用のアニメーションを読み込み
-        final Animation fadeInOut = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.move_cat_repeat);
 
         handler = new Handler(Looper.getMainLooper());
 
@@ -39,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 switchCatImage();
-                handler.postDelayed(this, 1000); // 1秒ごとに切り替える（必要に応じて調整）
+                handler.postDelayed(this, 1000); // 1秒ごとに切り替える
             }
         }, 1000); // 初回は1秒後に実行
 
@@ -47,8 +45,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.bt_shop).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, ShopActivity.class);
 
+                //ホーム画面からショップ画面に遷移
+                Intent intent = new Intent(MainActivity.this, ShopActivity.class);
                 startActivity(intent);
             }
         });
@@ -57,8 +56,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.bt_achievement).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, AchievementActivity.class);
 
+                //ホーム画面からアチーブメント画面に遷移
+                Intent intent = new Intent(MainActivity.this, AchievementActivity.class);
                 startActivity(intent);
             }
         });
@@ -67,19 +67,24 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.bt_history).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
 
+                //ホーム画面からヒストリー画面に遷移
+                Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
                 startActivity(intent);
             }
         });
     }
 
+    //ペットの画像を切り替えるメソッド
     private void switchCatImage() {
         if (isCat1Visible) {
+            //2枚目に変更
             catImageView.setImageResource(R.drawable.cat2);
         } else {
+            //1枚目に変更
             catImageView.setImageResource(R.drawable.cat1);
         }
+        //フラグを切り替え
         isCat1Visible = !isCat1Visible;
     }
 

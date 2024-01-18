@@ -66,6 +66,7 @@ public class ShopActivity extends AppCompatActivity {
         // 画像の大きさを調整
         Drawable drawable = getResources().getDrawable(imageResourceId);
         int imageSize = getResources().getDimensionPixelSize(R.dimen.image_size); // dimen リソースを使用してサイズを指定
+
         drawable.setBounds(64, 0, imageSize, imageSize);
         button.setCompoundDrawables(drawable, null, null, null);
 
@@ -86,9 +87,11 @@ public class ShopActivity extends AppCompatActivity {
         // ボタンクリック時の処理
         button.setOnClickListener(new View.OnClickListener() {
             @Override
+            //戻るボタンクリック時の処理
             public void onClick(View v) {
-                Intent intent = new Intent(ShopActivity.this, MainActivity.class);
 
+                //ショップ画面からホームへ遷移
+                Intent intent = new Intent(ShopActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
