@@ -25,6 +25,9 @@
             android:name=".ShopActivity"
             android:exported="false" />
         <activity
+            android:name=".StartActivity"
+            android:exported="false" />
+        <activity
             android:name=".checkActivity"
             android:exported="true">
             <intent-filter>
